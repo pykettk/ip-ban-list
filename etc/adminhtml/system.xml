@@ -38,18 +38,28 @@
                    showInWebsite="1"
                    showInStore="1">
                 <label>General Configuration</label>
+                <depends>
+                    <field id="ip_ban_list/general/enable">1</field>
+                </depends>
                 <field id="ip_addresses"
                        translate="label comment"
                        type="textarea"
-                       sortOrder="1"
+                       sortOrder="10"
                        showInDefault="1"
                        showInWebsite="1"
                        showInStore="1">
                     <label>Banned IPs</label>
                     <comment>Enter a comma separated list of the IP addresses you want to ban.</comment>
-                    <depends>
-                        <field id="ip_ban_list/general/enable">1</field>
-                    </depends>
+                </field>
+                <field id="redirect_url"
+                       translate="label comment"
+                       type="text"
+                       sortOrder="20"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Redirect URL</label>
+                    <comment>Enter the URL to redirect banned IPs to.</comment>
                 </field>
             </group>
         </section>
