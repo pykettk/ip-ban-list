@@ -2,12 +2,12 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="Element119_ModuleName::menu"
-             title="Module Name"
-             action="admin/system_config/edit/section/module_name"
+        <add id="Element119_IpBlacklist::menu"
+             title="IP Blacklist"
+             action="admin/system_config/edit/section/ip_blacklist"
              sortOrder="1000"
-             module="Element119_ModuleName"
-             resource="Element119_ModuleName::menu"
+             module="Element119_IpBlacklist"
+             resource="Element119_IpBlacklist::menu"
              parent="Element119_Core::menu" />
     </menu>
 </config>
