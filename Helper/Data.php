@@ -8,6 +8,8 @@ use Magento\Framework\HTTP\PhpEnvironment\RemoteAddress;
 class Data extends AbstractHelper
 {
     const MODULE_ENABLED_CONFIG = 'ip_ban_list/general/enable';
+    const BANNED_IP_LIST_CONFIG = 'ip_ban_list/ban_list/ip_addresses';
+    const REDIRECT_URL_CONFIG = 'ip_ban_list/ban_list/redirect_url';
 
     /** @var RemoteAddress */
     protected $remoteAddress;
@@ -19,8 +21,8 @@ class Data extends AbstractHelper
      * @param RemoteAddress $remoteAddress
      */
     public function __construct(
-        Context $context,
-        RemoteAddress $remoteAddress
+            Context $context,
+            RemoteAddress $remoteAddress
     ) {
         parent::__construct($context);
 
@@ -38,8 +40,42 @@ class Data extends AbstractHelper
     /**
      * @return bool|string
      */
-    public function getCustomerIp()
+    public function getVisitorIp()
     {
         return ($this->isModuleEnabled()) ? $this->remoteAddress->getRemoteAddress() : false;
+    }
+
+    /**
+     * @return array|mixed
+     */
+    public function getBannedIpsList()
+    {
+        $ips = [];
+
+        if ($this->isModuleEnabled()) {
+            foreach (explode(',', $this->scopeConfig->getValue(self::BANNED_IP_LIST_CONFIG)) as $ip) {
+                if ($ip) {
+                    $ips[] = preg_replace('/^\r\n/', '', $ip);
+                }
+            }
+        }
+
+        return $ips;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isVisitorBanned()
+    {
+        return in_array($this->getVisitorIp(), $this->getBannedIpsList());
+    }
+
+    /**
+     * @return mixed|string
+     */
+    public function getRedirectUrl()
+    {
+        return ($this->isModuleEnabled()) ? $this->scopeConfig->getValue(self::REDIRECT_URL_CONFIG) : '/';
     }
 }
