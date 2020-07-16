@@ -1,3 +1,9 @@
+<div align="center">
+
+![](https://i.imgur.com/XcOoJBj.png)
+
+</div>
+
 <h1 align="center">element119 | IP Ban List</h1>
 
 <div align="center">
