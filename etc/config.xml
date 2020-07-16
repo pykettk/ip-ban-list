@@ -6,6 +6,9 @@
             <general>
                 <enable>1</enable>
             </general>
+            <ban_list>
+                <redirect_url>https://www.google.co.uk/</redirect_url>
+            </ban_list>
         </ip_ban_list>
     </default>
 </config>
