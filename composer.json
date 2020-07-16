@@ -1,6 +1,6 @@
 {
-    "name": "element119/magento2-module",
-    "version": "1.0.6",
+    "name": "element119/ip-blacklist",
+    "version": "1.0.0",
     "type": "magento2-module",
     "license": [
         "proprietary"
@@ -20,7 +20,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Element119\\ModuleName\\": ""
+            "Element119\\IpBlacklist\\": ""
         }
     }
 }
