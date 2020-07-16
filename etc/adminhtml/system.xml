@@ -4,7 +4,7 @@
     <system>
         <section id="ip_ban_list"
                  translate="label"
-                 sortOrder="1000"
+                 sortOrder="9500"
                  showInDefault="1"
                  showInWebsite="1"
                  showInStore="1">

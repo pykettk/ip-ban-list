@@ -5,7 +5,7 @@
         <add id="Element119_IpBanList::menu"
              title="IP Ban List"
              action="admin/system_config/edit/section/ip_ban_list"
-             sortOrder="1000"
+             sortOrder="9500"
              module="Element119_IpBanList"
              resource="Element119_IpBanList::menu"
              parent="Element119_Core::menu" />
