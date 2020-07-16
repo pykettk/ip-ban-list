@@ -4,7 +4,7 @@
     <system>
         <section id="ip_ban_list"
                  translate="label"
-                 sortOrder="130"
+                 sortOrder="1000"
                  showInDefault="1"
                  showInWebsite="1"
                  showInStore="1">
@@ -13,7 +13,8 @@
             <resource>Element119_IpBanList::menu</resource>
             <group id="general"
                    translate="label"
-                   type="text" sortOrder="10"
+                   type="text"
+                   sortOrder="1"
                    showInDefault="1"
                    showInWebsite="1"
                    showInStore="1">
@@ -27,6 +28,28 @@
                        showInStore="1">
                     <label>Enable Module</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="ban_list"
+                   translate="label"
+                   type="text"
+                   sortOrder="10"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1">
+                <label>General Configuration</label>
+                <field id="ip_addresses"
+                       translate="label comment"
+                       type="textarea"
+                       sortOrder="1"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1">
+                    <label>Banned IPs</label>
+                    <comment>Enter a comma separated list of the IP addresses you want to ban.</comment>
+                    <depends>
+                        <field id="ip_ban_list/general/enable">1</field>
+                    </depends>
                 </field>
             </group>
         </section>
