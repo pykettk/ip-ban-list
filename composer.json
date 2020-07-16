@@ -1,0 +1,26 @@
+{
+    "name": "element119/magento2-module",
+    "version": "1.0.6",
+    "type": "magento2-module",
+    "license": [
+        "proprietary"
+    ],
+    "authors":[
+        {
+            "name": "Kiel Pykett",
+            "email": "pykettk@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "element119/core": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Element119\\ModuleName\\": ""
+        }
+    }
+}
