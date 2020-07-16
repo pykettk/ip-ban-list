@@ -1,5 +1,5 @@
 {
-    "name": "element119/ip-blacklist",
+    "name": "element119/ip-ban-list",
     "version": "1.0.0",
     "type": "magento2-module",
     "license": [
@@ -20,7 +20,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Element119\\IpBlacklist\\": ""
+            "Element119\\IpBanList\\": ""
         }
     }
 }

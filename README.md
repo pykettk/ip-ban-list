@@ -1,14 +1,14 @@
-<h1 align="center">element119 | IP Blacklist</h1>
+<h1 align="center">element119 | IP Ban List</h1>
 
 <div align="center">
 
 ![status](https://img.shields.io/badge/status-active-5fc238.svg)
-![github release](https://img.shields.io/github/v/release/pykettk/ip-blacklist?color=ffbf00&label=version)
-![github release date](https://img.shields.io/github/release-date/pykettk/ip-blacklist?color=8b32a8&label=last%20release)
+![github release](https://img.shields.io/github/v/release/pykettk/ip-ban-list?color=ffbf00&label=version)
+![github release date](https://img.shields.io/github/release-date/pykettk/ip-ban-list?color=8b32a8&label=last%20release)
 ![magento](https://img.shields.io/badge/Magento-2.3.*-ec6611.svg)
 ![php](https://img.shields.io/badge/PHP->=7.0-5870c7.svg)
 ![license](https://img.shields.io/badge/license-MIT-ff00dd.svg)
-![packagist downloads](https://img.shields.io/packagist/dt/element119/ip-blacklist?color=ff0000)
+![packagist downloads](https://img.shields.io/packagist/dt/element119/ip-ban-list?color=ff0000)
 
 </div>
 
@@ -42,8 +42,8 @@
 ## 🔌 Installation
 Run the following command to *install* this module:
 ```bash
-composer require elemen119/ip-blacklist
-php bin/magento module:enable Element119_Core Element119_IpBlacklist
+composer require elemen119/ip-ban-list
+php bin/magento module:enable Element119_Core Element119_IpBanList
 php bin/magento setup:di:compile
 php bin/magento static:content:deploy
 php bin/magento setup:upgrade --keep-generated
@@ -54,8 +54,8 @@ php bin/magento setup:upgrade --keep-generated
 ## ⏫ Updating
 Run the following command to *update* this module:
 ```bash
-composer update element119/ip-blacklist
-php bin/magento module:enable Element119_Core Element119_IpBlacklist
+composer update element119/ip-ban-list
+php bin/magento module:enable Element119_Core Element119_IpBanList
 php bin/magento setup:di:compile
 php bin/magento static:content:deploy
 php bin/magento setup:upgrade --keep-generated
@@ -66,8 +66,8 @@ php bin/magento setup:upgrade --keep-generated
 ## ❌ Uninstallation
 Run the following command to *uninstall* this module:
 ```bash
-composer remove element119/ip-blacklist
-php bin/magento module:enable Element119_Core Element119_IpBlacklist
+composer remove element119/ip-ban-list
+php bin/magento module:enable Element119_Core Element119_IpBanList
 php bin/magento setup:di:compile
 php bin/magento static:content:deploy
 php bin/magento setup:upgrade --keep-generated

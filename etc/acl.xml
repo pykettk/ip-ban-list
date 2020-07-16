@@ -5,7 +5,7 @@
         <resources>
             <resource id="Magento_Backend::admin">
                 <resource id="Element119_Core::menu">
-                    <resource id="Element119_IpBlacklist::menu" title="IP Blacklist" />
+                    <resource id="Element119_IpBanList::menu" title="IP Ban List" />
                 </resource>
             </resource>
         </resources>
